@@ -8,7 +8,7 @@ There are two files - setup.py and Session_Note_Writer.py. First run and follow 
 
 ## Preview
 
-![Mathnasium Session Note Writer](https://imgur.com/a/oCGZKXw)
+![Mathnasium Session Note Writer](https://i.imgur.com/bmDpYep.png)
 
 ## Contributing
 
