@@ -16,6 +16,9 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
+## Disclaimer of Liability
+I hereby declare that I shall not be held accountable or liable for any adverse outcomes or consequences that may occur as a result of using this program.
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
