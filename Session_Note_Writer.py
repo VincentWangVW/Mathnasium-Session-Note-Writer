@@ -29,7 +29,6 @@ def Title():
 Title()
 
 # Lists that the program will randomly select phrases from for the session note writer
-# TODO add more phrases
 greetingList = ['Hello!',
                 'Howdy!',
                 'Hi!',
@@ -75,7 +74,6 @@ initial = setup.initial()
 instructorName = setup.name()
 date = input('\033[32mDate: \033[0m')
 
-
 # Main function for the session note writer
 def writer():
     name = input('\033[32mStudent Name: \033[0m')
@@ -95,27 +93,27 @@ def writer():
         amount = int(input('\033[32mEnter the amount of mastery checks they completed: \033[0m'))
         if amount == 1:
             mast = input('\033[32mEnter the Mastery check\'s topic: \033[0m')
-            ppf = input('\033[32mDid they pass that mastery check (y/: \033[0m')
-            if ppf == 'y':
-                ppf = 'passed'
+            passFail = input('\033[32mDid they pass that mastery check (y/: \033[0m')
+            if passFail == 'y':
+                passFail = 'passed'
             else:
-                ppf = 'failed'
-            mastery = 'They completed one mastery check and it was about ' + mast + ' and they ' + ppf + '.'
+                passFail = 'failed'
+            mastery = 'They completed one mastery check and it was about ' + mast + ' and they ' + passFail + '.'
         else:
-            bruh = 0
-            while amount > bruh:
-                bruh1 = bruh + 1
+            counter = 0
+            while amount > counter:
+                bruh1 = counter + 1
                 Title()
                 mast = input('\033[32mEnter mastery check #' + str(bruh1) + '\'s topic: \033[0m')
-                ppf = input('\033[32mDid they pass that mastery check (y/n): \033[0m')
-                if ppf == 'y':
-                    ppf = 'passed'
-                    pf.append(ppf)
+                passFail = input('\033[32mDid they pass that mastery check (y/n): \033[0m')
+                if passFail == 'y':
+                    passFail = 'passed'
+                    pf.append(passFail)
                 else:
-                    ppf = 'failed'
-                    pf.append(ppf)
+                    passFail = 'failed'
+                    pf.append(passFail)
                 title.append(mast)
-                bruh = bruh1
+                counter = bruh1
                 x = 0
             mastery = ''
             while len(title) > x:
@@ -138,7 +136,6 @@ def writer():
     ringCentral = greeting + ' This is ' + instructorName + ' from Mathnasium. '
     copied_note1 = session_note + student_note + special_note + ' ' + ending
     copied_note2 = ringCentral + student_note + special_note + ' ' + ending
-    # TODO make paraphraser
     print('Here is your session note:\n')
     print(f'\033[36m{copied_note1}\033[0m\n\nAbove Message Copied!')
     pyperclip.copy(copied_note1)
